@@ -18,8 +18,8 @@ public class GameOfLife
     private ActorWorld world;
     
     // the game board will have 5 rows and 5 columns
-    private final int ROWS = 5;
-    private final int COLS = 5;
+    private final int ROWS = 11;
+    private final int COLS = 10;
     
     /**
      * Default constructor for objects of class GameOfLife
@@ -53,9 +53,7 @@ public class GameOfLife
     private void populateGame()
     {
         // constants for the location of the three cells initially alive
-        final int X1 = 2, Y1 = 0;
-        final int X2 = 0, Y2 = 2;
-        final int X3 = 1, Y3 = 2;
+        final int X1 = 5, Y1 = 1;
 
         // the grid of Actors that maintains the state of the game
         //  (alive cells contains actors; dead cells do not)
@@ -63,16 +61,98 @@ public class GameOfLife
         
         // create and add rocks (a type of Actor) to the three intial locations
         Rock rock1 = new Rock();
-        Location loc1 = new Location(Y1, X1);
+        Location loc1 = new Location(X1, Y1);
         grid.put(loc1, rock1);
         
         Rock rock2 = new Rock();
-        Location loc2 = new Location(Y2, X2);
+        Location loc2 = new Location(X1 - 1, Y1 +1);
         grid.put(loc2, rock2);
         
         Rock rock3 = new Rock();
-        Location loc3 = new Location(Y3, X3);
+        Location loc3 = new Location(X1 +1 ,Y1 +1);
         grid.put(loc3, rock3);
+        
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+        
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+//         Rock rock3 = new Rock();
+//         Location loc3 = new Location(Y3, X3);
+//         grid.put(loc3, rock3);
+//         
+        
+        
+        
     }
 
     /**
@@ -120,6 +200,13 @@ public class GameOfLife
     {
         return ROWS;
     }
+    
+    
+    
+    
+    
+    
+    
     
     /**
      * Returns the number of columns in the game board
