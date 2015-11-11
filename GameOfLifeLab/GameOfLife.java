@@ -60,96 +60,102 @@ public class GameOfLife
         Grid<Actor> grid = world.getGrid();
         
         // create and add rocks (a type of Actor) to the three intial locations
-        Rock rock1 = new Rock();
-        Location loc1 = new Location(X1, Y1);
-        grid.put(loc1, rock1);
+        Rock rock3_2 = new Rock();
+        Location loc3_2 = new Location(3, 2);
+        grid.put(loc3_2, rock3_2);
         
-        Rock rock2 = new Rock();
-        Location loc2 = new Location(X1 - 1, Y1 +1);
-        grid.put(loc2, rock2);
+        Rock rock3_3 = new Rock();
+        Location loc3_3 = new Location(3, 3);
+        grid.put(loc3_3, rock3_3);
         
-        Rock rock3 = new Rock();
-        Location loc3 = new Location(X1 +1 ,Y1 +1);
-        grid.put(loc3, rock3);
+        Rock rock3_4 = new Rock();
+        Location loc3_4 = new Location(3, 4);
+        grid.put(loc3_4, rock3_4);
         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
+        Rock rock3_5 = new Rock();
+        Location loc3_5 = new Location(3, 5);
+        grid.put(loc3_5, rock3_5);
         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
-//         Rock rock3 = new Rock();
-//         Location loc3 = new Location(Y3, X3);
-//         grid.put(loc3, rock3);
-//         
+        Rock rock3_6 = new Rock();
+        Location loc3_6 = new Location(3, 6);
+        grid.put(loc3_6, rock3_6);
+        
+        Rock rock3_7 = new Rock();
+        Location loc3_7 = new Location(3, 7);
+        grid.put(loc3_7, rock3_7);
+        
+        
+        //*******************ROW 4*******************************
+        Rock rock4_2 = new Rock();
+        Location loc4_2 = new Location(4, 2);
+        grid.put(loc4_2, rock4_2);
+        
+        Rock rock4_3 = new Rock();
+        Location loc4_3 = new Location(4, 3);
+        grid.put(loc4_3, rock4_3);
+        
+        Rock rock4_6 = new Rock();
+        Location loc4_6 = new Location(4, 6);
+        grid.put(loc4_6, rock4_6);
+        
+        Rock rock4_7 = new Rock();
+        Location loc4_7 = new Location(4, 7);
+        grid.put(loc4_7, rock4_7);
+        //*****************ROW 5************************************
+        
+        Rock rock5_1 = new Rock();
+        Location loc5_1 = new Location(5, 1);
+        grid.put(loc5_1, rock5_1);
+        
+        Rock rock5_8 = new Rock();
+        Location loc5_8 = new Location(5, 8);
+        grid.put(loc5_8, rock5_1);
+        
+        
+        //******************ROW 6*********************************
+        
+        Rock rock6_2 = new Rock();
+        Location loc6_2 = new Location(6, 2);
+        grid.put(loc6_2, rock6_2);
+        
+        Rock rock6_3 = new Rock();
+        Location loc6_3 = new Location(6, 3);
+        grid.put(loc6_3, rock6_3);
+        
+        Rock rock6_6 = new Rock();
+        Location loc6_6 = new Location(6, 6);
+        grid.put(loc6_6, rock6_6);
+        
+        Rock rock6_7 = new Rock();
+        Location loc6_7 = new Location(6, 7);
+        grid.put(loc6_7, rock6_7);
+        
+        //************************ROW 7***************************
+        Rock rock7_2 = new Rock();
+        Location loc7_2 = new Location(7, 2);
+        grid.put(loc7_2, rock7_2);
+        
+        
+        Rock rock7_3 = new Rock();
+        Location loc7_3 = new Location(7, 3);
+        grid.put(loc7_3, rock7_3);
+        
+        Rock rock7_4 = new Rock();
+        Location loc7_4 = new Location(7, 4);
+        grid.put(loc7_4, rock7_4);
+        
+        Rock rock7_5 = new Rock();
+        Location loc7_5 = new Location(7, 5);
+        grid.put(loc7_5, rock7_5);
+        
+        Rock rock7_6 = new Rock();
+        Location loc7_6 = new Location(7, 6);
+        grid.put(loc7_6, rock7_6);
+        
+        Rock rock7_7 = new Rock();
+        Location loc7_7 = new Location(7, 7);
+        grid.put(loc7_7, rock7_7);
+        
         
         
         
@@ -200,13 +206,6 @@ public class GameOfLife
     {
         return ROWS;
     }
-    
-    
-    
-    
-    
-    
-    
     
     /**
      * Returns the number of columns in the game board

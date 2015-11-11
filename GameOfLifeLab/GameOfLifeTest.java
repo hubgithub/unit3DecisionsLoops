@@ -68,26 +68,45 @@ public class GameOfLifeTest
         {
             for(int col = 0; col < COLS; col++)
             {
-                // in this example, an alive cell has a non-null actor and a dead cell has a null actor
+                //in this example, an alive cell has a non-null actor and a dead cell has a null actor
                 Actor cell = game.getActor(row, col);
 
-                // if the cell at the current row and col should be alive, assert that the actor is not null
-//                 if(     (row == 5 && col == 1) ||
-//                         (row == 4 && col == 2) ||
-//                         (row == 6 && col == 2) ||
-//                         (row == 7 && col == 2) ||
-//                         (row == 6 && col == 3) ||
-//                         (row == 7 && col == 3) ||
-//                         (row == 7 && col == 4) ||
-//                         )
-//                        
-//                 {
-//                     assertNotNull("expected alive cell at (" + row + ", " + col + ")", cell);
-//                 }
-//                 else // else, the cell should be dead; assert that the actor is null
-//                 {
-//                     assertNull("expected dead cell at (" + row + ", " + col + ")", cell);
-//                 }
+                //0if the cell at the current row and col should be alive, assert that the actor is not null
+                if(     (row == 3 && col == 2) ||
+                        (row == 3 && col == 3) ||
+                        (row == 3 && col == 4) ||
+                        (row == 3 && col == 5) ||
+                        (row == 3 && col == 6) ||
+                        (row == 3 && col == 7) ||
+                        
+                        (row == 4 && col == 2) ||
+                        (row == 4 && col == 3) ||
+                        (row == 4 && col == 6) ||
+                        (row == 4 && col == 7) ||
+                        
+                        (row == 5 && col == 1) ||
+                        (row == 5 && col == 8) ||
+                        
+                        (row == 6 && col == 2) ||
+                        (row == 6 && col == 3) ||
+                        (row == 6 && col == 6) ||
+                        (row == 6 && col == 7) ||
+                        
+                        (row == 7 && col == 2) ||
+                        (row == 7 && col == 3) ||
+                        (row == 7 && col == 4) ||
+                        (row == 7 && col == 5) ||
+                        (row == 7 && col == 6) ||
+                        (row == 7 && col == 7)
+                        )
+                       
+                {
+                    assertNotNull("expected alive cell at (" + row + ", " + col + ")", cell);
+                }
+                else // else, the cell should be dead; assert that the actor is null
+                {
+                    assertNull("expected dead cell at (" + row + ", " + col + ")", cell);
+                }
             }
         }
     }
