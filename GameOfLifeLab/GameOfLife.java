@@ -179,6 +179,7 @@ public class GameOfLife
         Grid<Actor> grid = world.getGrid();
         
         // insert magic here...
+         
         
     }
     
