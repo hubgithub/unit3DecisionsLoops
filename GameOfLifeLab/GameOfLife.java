@@ -156,6 +156,7 @@ public class GameOfLife
         Location loc7_7 = new Location(7, 7);
         grid.put(loc7_7, rock7_7);
         
+
         
         
         
@@ -179,7 +180,8 @@ public class GameOfLife
         Grid<Actor> grid = world.getGrid();
         
         // insert magic here...
-         
+
+     
         
     }
     
