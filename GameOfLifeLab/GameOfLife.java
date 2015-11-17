@@ -2,8 +2,10 @@ import info.gridworld.actor.Actor;
 import info.gridworld.actor.ActorWorld;
 import info.gridworld.actor.Rock;
 import info.gridworld.grid.Grid;
+import java.util.List;
 import info.gridworld.grid.BoundedGrid;
 import info.gridworld.grid.Location;
+import info.gridworld.grid.AbstractGrid;
 
 /**
  * Game of Life starter code. Demonstrates how to create and populate the game using the GridWorld framework.
@@ -50,10 +52,9 @@ public class GameOfLife
      * @post    all actors that comprise the initial state of the game have been added to the grid
      * 
      */
-    private void populateGame()
+    public void populateGame()
     {
         // constants for the location of the three cells initially alive
-        final int X1 = 5, Y1 = 1;
 
         // the grid of Actors that maintains the state of the game
         //  (alive cells contains actors; dead cells do not)
@@ -156,9 +157,6 @@ public class GameOfLife
         Location loc7_7 = new Location(7, 7);
         grid.put(loc7_7, rock7_7);
         
-
-        
-        
         
     }
 
@@ -170,7 +168,7 @@ public class GameOfLife
      * @post    the world has been populated with a new grid containing the next generation
      * 
      */
-    private void createNextGeneration()
+    public void createNextGeneration()
     {
         /** You will need to read the documentation for the World, Grid, and Location classes
          *      in order to implement the Game of Life algorithm and leverage the GridWorld framework.
@@ -178,10 +176,43 @@ public class GameOfLife
         
         // create the grid, of the specified size, that contains Actors
         Grid<Actor> grid = world.getGrid();
-        
+        BoundedGrid<Actor> newgrid = new BoundedGrid<Actor>(ROWS, COLS);
         // insert magic here...
+        
+        Location locA;
+        List lis;
+        int row;
+        int col;
+        int num;
+        Rock newrock = new Rock();
+        for(row = 0; row < grid.getNumRows(); row++)
+        {
+            for(col = 0; col < grid.getNumCols(); col++)
+            {
+                locA = new Location(row,col);
+                lis = grid.getOccupiedAdjacentLocations(locA);
+                System.out.println(lis);
+                num = lis.size();
 
-     
+                if(num == 2)
+                {
+                    newgrid.put(locA,newrock);
+                }
+                else if(num == 3)
+                {
+                    newgrid.put(locA,newrock);
+                }
+                else if (num == 4)
+                {
+                    newgrid.put(locA,newrock);
+                }
+
+            }
+        
+
+        }
+        world = new ActorWorld(newgrid);
+        world.show();
         
     }
     
