@@ -2,8 +2,10 @@ import info.gridworld.actor.Actor;
 import info.gridworld.actor.ActorWorld;
 import info.gridworld.actor.Rock;
 import info.gridworld.grid.Grid;
+import java.util.List;
 import info.gridworld.grid.BoundedGrid;
 import info.gridworld.grid.Location;
+import info.gridworld.grid.AbstractGrid;
 
 /**
  * Game of Life starter code. Demonstrates how to create and populate the game using the GridWorld framework.
@@ -50,7 +52,7 @@ public class GameOfLife
      * @post    all actors that comprise the initial state of the game have been added to the grid
      * 
      */
-    private void populateGame()
+    public void populateGame()
     {
         // constants for the location of the three cells initially alive
         final int X1 = 5, Y1 = 1;
@@ -179,6 +181,26 @@ public class GameOfLife
         Grid<Actor> grid = world.getGrid();
         
         // insert magic here...
+        System.out.println("9999999999999999");
+        Location locA;
+        List lis;
+        int row;
+        int col;
+        for(row = 0; row < grid.getNumRows(); row++)
+        {
+            for(col = 0; col < grid.getNumCols(); col++)
+            {
+                locA = new Location(row,col);
+                lis = grid.getOccupiedAdjacentLocations(locA);
+                System.out.println(lis);
+                System.out.println("dsfsdfsdfwe");
+            }
+        
+        
+        
+        
+        }
+        
          
         
     }
