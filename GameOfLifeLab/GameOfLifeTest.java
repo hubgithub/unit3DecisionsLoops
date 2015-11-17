@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import info.gridworld.actor.Actor;
 
+
 /**
  * The test class GameOfLifeTest.
  *

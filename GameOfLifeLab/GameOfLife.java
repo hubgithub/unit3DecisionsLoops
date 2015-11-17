@@ -2,10 +2,11 @@ import info.gridworld.actor.Actor;
 import info.gridworld.actor.ActorWorld;
 import info.gridworld.actor.Rock;
 import info.gridworld.grid.Grid;
-import java.util.List;
 import info.gridworld.grid.BoundedGrid;
 import info.gridworld.grid.Location;
 import info.gridworld.grid.AbstractGrid;
+import java.util.ArrayList;
+
 
 /**
  * Game of Life starter code. Demonstrates how to create and populate the game using the GridWorld framework.
@@ -176,43 +177,40 @@ public class GameOfLife
         
         // create the grid, of the specified size, that contains Actors
         Grid<Actor> grid = world.getGrid();
-        BoundedGrid<Actor> newgrid = new BoundedGrid<Actor>(ROWS, COLS);
-        // insert magic here...
+        BoundedGrid<Actor> newGrid = new BoundedGrid<Actor>(this.ROWS, this.COLS);
         
-        Location locA;
-        List lis;
-        int row;
-        int col;
-        int num;
-        Rock newrock = new Rock();
-        for(row = 0; row < grid.getNumRows(); row++)
+        world.setGrid(newGrid);
+        
+        for (int row = 0; row < this.ROWS - 1; row++)
         {
-            for(col = 0; col < grid.getNumCols(); col++)
+            for (int col = 0; col < this.COLS - 1; col++)
             {
-                locA = new Location(row,col);
-                lis = grid.getOccupiedAdjacentLocations(locA);
-                System.out.println(lis);
-                num = lis.size();
-
-                if(num == 2)
+                Location loc = new Location(row, col);
+                ArrayList around = grid.getOccupiedAdjacentLocations(loc);
+                if ((around.size() < 2) && (grid.get(loc) != null))
                 {
-                    newgrid.put(locA,newrock);
+                    newGrid.remove(loc);
                 }
-                else if(num == 3)
+                else if ((around.size() < 4) && (grid.get(loc) != null))
                 {
-                    newgrid.put(locA,newrock);
+                    Rock rock = new Rock();
+                    newGrid.put(loc, rock);
                 }
-                else if (num == 4)
+                else if ((around.size() > 3) && (grid.get(loc) != null))
                 {
-                    newgrid.put(locA,newrock);
+                    newGrid.remove(loc);
                 }
-
+                else if ((around.size() == 3) && (grid.get(loc) == null))
+                {
+                    Rock rock = new Rock();
+                    newGrid.put(loc, rock);
+                }
+                
+                world.show();
             }
-        
-
         }
-        world = new ActorWorld(newgrid);
-        world.show();
+        
+        
         
     }
     
@@ -259,6 +257,12 @@ public class GameOfLife
     public static void main(String[] args)
     {
         GameOfLife game = new GameOfLife();
+        boolean i = true;
+        while(i)
+        {
+            game.createNextGeneration();
+            
+        }
     }
 
 }
