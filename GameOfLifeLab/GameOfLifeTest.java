@@ -121,17 +121,17 @@ public class GameOfLifeTest
          *  (X: alive; -: dead)
          * 
          *     0 1 2 3 4 5 6 7 8 9
-         *  0  - - - X - - X - - -
-         *  1  - - - X - - X - - - 
-         *  2  - - - X X X X - - -
+         *  0  - - - - - - - - - -
+         *  1  - - - - - - - - - - 
+         *  2  - - - - - - - - - -
          *  3  - - - - - - - - - -
-         *  4  - X - - - - - - X
-         *  5  - X - - - - - - X - 
-         *  6  - X - - - - - - X - 
+         *  4  - - - - - - X - - -
+         *  5  X X - - - - X X X - 
+         *  6  - - - - - - X - - - 
          *  7  - - - - - - - - - -
-         *  8  - - - X X X X - - - 
-         *  9  - - - X - - X - - -
-         *  10 - - - X - - X - - -
+         *  8  - - - - - - - - - - 
+         *  9  - - - - - - - - - -
+         *  10 - - - - - - - - - -
          */
         
         GameOfLife game = new GameOfLife();
@@ -150,36 +150,17 @@ public class GameOfLifeTest
                 Actor cell = game.getActor(row, col);
 
                 //0if the cell at the current row and col should be alive, assert that the actor is not null
-                if(     (row == 0 && col == 3) ||
-                        (row == 0 && col == 6) ||
-                        
-                        (row == 1 && col == 3) ||
-                        (row == 1 && col == 6) ||
-                        
-                        (row == 2 && col == 3) ||
-                        (row == 2 && col == 4) ||
-                        (row == 2 && col == 5) ||
-                        (row == 2 && col == 6) ||
-                        
+                if(     
                         (row == 4 && col == 6) ||
-                        (row == 4 && col == 7) ||
                         
+                        (row == 5 && col == 0) ||
+                        (row == 5 && col == 1) ||
                         (row == 5 && col == 6) ||
                         (row == 5 && col == 7) ||
+                        (row == 5 && col == 8) ||
+ 
                         
-                        (row == 6 && col == 6) ||
-                        (row == 6 && col == 7) ||
-                        
-                        (row == 8 && col == 3) ||
-                        (row == 8 && col == 4) ||
-                        (row == 8 && col == 5) ||
-                        (row == 8 && col == 6) ||
-                        
-                        (row == 9 && col == 3) ||
-                        (row == 9 && col == 6) ||
-                        
-                        (row == 10 && col == 3) ||
-                        (row == 10 && col == 6)
+                        (row == 6 && col == 6) 
                         )
                        
                 {

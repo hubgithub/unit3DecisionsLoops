@@ -181,9 +181,9 @@ public class GameOfLife
         
         world.setGrid(newGrid);
         
-        for (int row = 0; row < this.ROWS - 1; row++)
+        for (int row = 0; row < ROWS - 1; row++)
         {
-            for (int col = 0; col < this.COLS - 1; col++)
+            for (int col = 0; col < COLS - 1; col++)
             {
                 Location loc = new Location(row, col);
                 ArrayList around = grid.getOccupiedAdjacentLocations(loc);
@@ -254,14 +254,14 @@ public class GameOfLife
      * Creates an instance of this class. Provides convenient execution.
      *
      */
-    public static void main(String[] args)
+    public static void main(String[] args)throws InterruptedException
     {
         GameOfLife game = new GameOfLife();
         boolean i = true;
         while(i)
         {
             game.createNextGeneration();
-            
+            Thread.sleep(1000);
         }
     }
 
