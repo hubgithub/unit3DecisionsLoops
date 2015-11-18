@@ -1,4 +1,4 @@
-Introduction
+﻿Introduction
 
 The goal of this lab is to apply your understanding of decision and loop
 	structures to implement a complex algorithm within the context of an
@@ -8,6 +8,24 @@ The goal of this lab is to apply your understanding of decision and loop
 
 
 Requirements
+
+	size of grid: 50*50
+
+	live cells look like Rock
+
+	dead cells is blank
+
+	pattern is chosen by the program
+
+	pattern will run 101 generations, then stop
+
+	the time interval between each generation is 300 ms
+		（I made 45th generation sleep for 5 seconds, because it looks like an evil robots and it's cool)
+
+	there is no edge cases in this program, because the grid is big enough for cells
+
+
+
 
 Write a program that plays Conway’s Game of Life. Conway’s Game of Life is a
 	cellular automaton. From Wikipedia:
@@ -66,6 +84,14 @@ Artifacts to Produce:
 	like or dislike and why? What was surprising or unexpected? What did you
 	learn? What questions do you still have? What advice would you offer next
 	year's students?
+
+
+		I'm a little don't like it, it is very fun, because it takes so much time on the intial
+		pattern instead of the algorithm, hundreds lines of code just to set up the intial pattern.
+
+		How do I let the user choose the pattern by cliking with their mouse.
+
+		I only have three words to say: READ THE DOCUMENTATIONNNNN!!!!!!!!!
 
 
 Submission:
